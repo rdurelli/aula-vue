@@ -1,0 +1,24 @@
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+<div id="app">
+    <p>{{ titulo }}</p>
+    <a v-bind:href=link>GOOGLE</a>
+</div>
+
+
+<script>
+        new Vue({
+            el: '#app',
+            data: {
+                titulo: "Ola vue JS",
+                link: "www.google.com.br"
+            },
+            methods: {
+                hello(){
+                    console.log(this)
+                    x = Math.pow(7, 3).toString()
+                    return x
+                }
+            },
+        })
+</script>
