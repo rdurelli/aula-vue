@@ -5,7 +5,7 @@
     <button v-on:click="contador2++">Aumentar 2</button>
     <button v-on:click="diminuir">Diminuir</button>
     <p>Contador: {{ contador }} | {{ contador2 }}</p>
-    <p>Resultado: {{ resultado() }}</p>
+    <p>Resultado: {{ resultado }}</p>
 </div>
 
 
@@ -16,6 +16,13 @@
                 contador: 0,
                 contador2: 0
     
+            },
+            computed: {
+                resultado() {
+                    console.log("Chamou o metodo computado resultado")
+                    return this.contador >=5 ?
+                        'Maior ou igual a 5' : 'Menor que 5'
+                }
             },
             methods: {
                 aumentar() {
@@ -28,11 +35,11 @@
                     this.contador--
                     
                 },
-                resultado() {
-                    console.log("Chamou o metodo resultado")
-                    return this.contador >=5 ?
-                        'Maior ou igual a 5' : 'Menor que 5'
-                }
+                // resultado() {
+                //     console.log("Chamou o metodo resultado")
+                //     return this.contador >=5 ?
+                //         'Maior ou igual a 5' : 'Menor que 5'
+                // }
             },
         })
 </script>
