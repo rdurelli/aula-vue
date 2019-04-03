@@ -11,7 +11,8 @@ export default {
     props: {
         nome: {
             type: String,
-            required: true
+            default: 'Anônimo'
+            // required: true
         }
     },
     methods: {
