@@ -2,13 +2,18 @@
     <div class="componente">
         <h2>As Informações de Usuário</h2>
         <p>Vários detalhes...</p>
-        <p>Nome do Usuario:</p> <strong>{{ nome }}</strong>
+        <p>Nome do Usuario:</p> <strong>{{ inverterNome()}}</strong>
     </div>
 </template>
 
 <script>
 export default {
-    props: ['nome']
+    props: ['nome'],
+    methods: {
+        inverterNome() {
+            return this.nome.split('').reverse().join('')
+        }
+    },
 }
 </script>
 
