@@ -9,6 +9,11 @@
 <script>
 export default {
     props: ['nome'],
+    data() {
+        return {
+            nome: ''
+        }
+    },
     methods: {
         inverterNome() {
             return this.nome.split('').reverse().join('')
