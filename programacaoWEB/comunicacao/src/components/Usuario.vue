@@ -2,10 +2,11 @@
     <div class="container">
         <h1>Componente Usuário</h1>
         <p>Esse é um componente muito legal!</p>
+        <button @click="alterarNome">Alterar Nome</button>
         <hr>
         <div class="componentes">
-            <app-usuario-info />
-            <app-usuario-editar />
+            <app-usuario-info nome="Pedro"/>
+            <app-usuario-editar/>
         </div>
     </div>
 </template>
@@ -15,7 +16,17 @@ import AppUsuarioInfo from './UsuarioInfo'
 import AppUsuarioEditar from './UsuarioEditar'
 
 export default {
-    components: { AppUsuarioInfo, AppUsuarioEditar }
+    components: { AppUsuarioInfo, AppUsuarioEditar },
+    data() {
+        return {
+            nome: "Pedro"
+        }
+    },
+    methods: {
+        alterarNome() {
+            this.nome = 'Ana'
+        }
+    },
 }
 </script>
 
